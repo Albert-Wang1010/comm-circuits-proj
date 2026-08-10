@@ -74,7 +74,7 @@ Completed as part of Columbia University's **Electronic Circuits (ELEN E4314)** 
 
 ## Acknowledgments
 
-The author thanks [partner name] for contributions to the audio-chain design and iterative simulation debugging.
+The author thanks Christopher Moronta and Caitlin O'Dea for contributions to the audio-chain design and iterative simulation debugging.
 
 ---
 
