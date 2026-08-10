@@ -62,7 +62,7 @@ For pole-zero analysis of the LC tank, transformer coupling calculations, sizing
 
 ## Academic Context
 
-Completed as part of Columbia University's **Electronic Circuits (ELEN E4314)** course, Spring 2025. Demonstrates iterative RF/analog circuit design methodology under strict parts and power constraints, from topology selection through FCC-compliant simulation verification.
+Completed as part of Columbia University's **Electronic Circuits (ELEN E4314)** course, Spring 2026. Demonstrates iterative RF/analog circuit design methodology under strict parts and power constraints, from topology selection through FCC-compliant simulation verification.
 
 **Author:** Albert Wang  
 **Institution:** Columbia University, Department of Electrical Engineering  
