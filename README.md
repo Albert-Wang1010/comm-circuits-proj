@@ -2,7 +2,7 @@
 
 Supplementary materials for the Class D amplitude-modulation transmitter design project. Contains simulation waveforms, FFT spectra, power measurement data, and audio passband verification supporting the main technical paper.
 
-**For complete technical documentation, methodology, and analysis, see [docs/AM_Transmitter_Final.pdf](docs/AM_Transmitter_Final.pdf)**
+**For complete technical documentation, methodology, and analysis, see [docs/AM_Transmitter_Final.pdf](docs/Comm_Circuits_Final_Proj.pdf)**
 
 ---
 
