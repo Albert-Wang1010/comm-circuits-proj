@@ -1,5 +1,4 @@
 ### What's Included
-
 Each analysis directory contains:
 - **Simulation Waveforms** - LTspice screenshots at key operating points
 - **Extracted Data** - `.meas` results and computed performance metrics
@@ -15,7 +14,6 @@ Each analysis directory contains:
 ---
 
 ## Quick Links
-
 - **Main Paper:** [docs/AM_Transmitter_Final.pdf](docs/AM_Transmitter_Final.pdf)
 - **Complete Schematic:** [figures/architecture/schematic_full.png](figures/architecture/schematic_full.png)
 - **FFT Analysis:** [figures/fft_analysis/](figures/fft_analysis/)
@@ -33,7 +31,7 @@ Each analysis directory contains:
 | Carrier Frequency | 1 MHz | 1 MHz |
 | Load | 500 Ω | 500 Ω |
 | Modulation | AM via power-supply modulation | High-level (rail) modulation |
-| DC Power (final stage) | ≤ 100 mW | **83.9 mW** |
+| DC Power (final stage) | ≤ 100 mW | **84 mW** |
 | Modulation Depth | ~70% | **71%** |
 | Audio Distortion @ 70% mod | < 10% | **3.4%** |
 | Out-of-band Emissions | ≥ 20 dB below carrier | **> 28 dB** below carrier |
@@ -49,14 +47,14 @@ Each analysis directory contains:
 **Simulator:** LTspice XVII  
 **Transistor models:** Manufacturer-provided SPICE models for 2N2222A (Q2N2222Y) and 2N2907A  
 **Transformer:** Mouser 42TL001 (Lp = 300 mH, n = 8.333, k = 1)  
-
 **Approach:** Iterative simulation-driven design starting from the topology on p. 105 of the course notes, with successive optimization of the audio chain, RF buffer, and Class D output stage. Distortion and power were minimized jointly by tracking `.meas` outputs across design iterations, using FFT-derived modulation depth and sideband ratios as the primary distortion metric.
 
 **Key design decisions** (detailed in the paper):
 - **Vbe multiplier** (Q4) replaces series diodes for push-pull crossover bias (diodes not in permitted parts list)
 - **RF buffer supplied from modulated rail** rather than fixed VDD — reduces distortion from ~15% to <5% by ensuring the RF drive tracks the modulation envelope
-- **Asymmetric base drive**: large steady-state base resistors (2.2 kΩ) with 470 pF speedup capacitors bypass R2/R3 during transitions, keeping switching sharp while minimizing DC dissipation
+- **Asymmetric base drive**: large steady-state base resistors (2.2 kΩ) with 330 pF speed-up capacitors bypass R2/R3 during transitions, keeping switching sharp while minimizing DC dissipation. Sweeping R2/R3 from 1 kΩ to 2.2 kΩ was the single largest power improvement (108 mW → 84 mW); increasing the speed-up caps to 680 pF degraded performance and was reverted
 - **Class C bias** on the RF buffer (Q3 biased just below threshold) narrows conduction angle, further reducing average current draw
+- **Tank Q = 10** selected from the FCC Part 15 mask: the 1707 kHz band edge is the limiting case, requiring Q ≥ 9 for 20 dB attenuation
 
 For pole-zero analysis of the LC tank, transformer coupling calculations, sizing rationale, and complete design methodology, refer to the main paper.
 
@@ -68,14 +66,10 @@ Completed as part of Columbia University's **Electronic Circuits (ELEN E4314)** 
 
 **Author:** Albert Wang  
 **Institution:** Columbia University, Department of Electrical Engineering  
-**Contact:** aw3741@columbia.edu
+**Contact:** aw3741@stanford.edu
+
+Course project completed with Christopher Moronta and Caitlin O'Dea.
 
 ---
 
-## Acknowledgments
-
-The author thanks Christopher Moronta and Caitlin O'Dea for contributions to the audio-chain design and iterative simulation debugging.
-
----
-
-*For questions about the design methodology, technical details, or collaboration opportunities, please refer to the paper first, then contact via email.*
+*For questions about the design methodology or technical details, please refer to the paper first, then contact via email.*
