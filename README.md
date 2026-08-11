@@ -43,11 +43,14 @@ am-transmitter/
 │   └── am_transmitter.asc           # LTspice schematic source
 │
 └── figures/
-    ├── architecture/                # Full schematic, block-level diagrams
-    ├── switching/                   # Switching-node and rail waveforms
-    ├── fft_analysis/                # Spectra for THD and emissions verification
-    ├── power_analysis/              # .meas output, power budget breakdown
+    ├── architecture/                # Full schematic
+    ├── vout.png                     # Transmitted AM signal
+    ├── fft_analysis.png             # Spectra for THD and emissions verification
+    ├── power_analysis.png           # .meas output, power budget breakdown
     └── audio_band_verification/     # Passband endpoints at 250 Hz / 1 kHz / 5 kHz
+        ├── 250.png
+        ├── 1k.png
+        └── 5k.png  
 ```
 
 ### What's Included
