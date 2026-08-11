@@ -43,7 +43,7 @@ am-transmitter/
 │   └── am_transmitter.asc           # LTspice schematic source
 │
 └── figures/
-    ├── architecture/                # Full schematic
+    ├── schematic_full.png           # Full schematic
     ├── vout.png                     # Transmitted AM signal
     ├── fft_analysis.png             # Spectra for THD and emissions verification
     ├── power_analysis.png           # .meas output, power budget breakdown
@@ -54,29 +54,21 @@ am-transmitter/
 ```
 
 ### What's Included
-
-Each analysis directory contains:
+- Complete LTspice schematic (`.asc` source and rendered PNG)
 - **Simulation Waveforms** - LTspice screenshots at key operating points
 - **Extracted Data** - `.meas` results and computed performance metrics
-- **Design Characterization** - Time-domain, frequency-domain, and power analysis
-
-**Additional materials beyond the paper:**
-- Complete LTspice schematic (`.asc` source and rendered PNG)
-- Modulated rail and switching-node waveforms at rail extremes
-- FFT spectra for THD calculation and FCC emissions verification
 - Power breakdown showing DC supply current, buffer dissipation, and load power
 - Audio passband verification at 250 Hz, 1 kHz, and 5 kHz
-- Optimization history across design iterations
 
 ---
 
 ## Quick Links
 
 - **Main Paper:** [docs/Comm_Circuits_Final_Proj.pdf](docs/Comm_Circuits_Final_Proj.pdf)
-- **Complete Schematic:** [figures/architecture/schematic_full.png](figures/architecture/schematic_full.png)
-- **FFT Analysis:** [figures/fft_analysis/](figures/fft_analysis/)
-- **Switching Waveforms:** [figures/switching/](figures/switching/)
-- **Power Analysis:** [figures/power_analysis/](figures/power_analysis/)
+- **Complete Schematic:** [figures/schematic_full.png](figures/schematic_full.png)
+- **FFT Analysis:** [figures/fft_analysis.png](figures/fft_analysis.png)
+- **AM transmitted Waveforms:** [figures/vout.png](figures/vout.png)
+- **Power Analysis:** [figures/power_analysis.png](figures/power_analysis.png)
 - **Audio Band Verification:** [figures/audio_band_verification/](figures/audio_band_verification/)
 
 ---
